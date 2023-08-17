@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display a Veda data on a webpage</title>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+</head>
+<body>
+  <div id = "menu">
+               <button id="reset" class="reset-btn"><i class="fas fa-undo"></i></button>
+              <a href = "main.html">Full map</a>
+              <span class="vertical-line">|</span>
+              <a href = "four-maps.html">Four maps</a>
+  </div>
+
+      <div id="container">
+    <div class="map-container">
+        <div id="map1" class="map"></div>
+        <div class="button-container left">
+            <div class="dropdown">
+                <button id="dropdown1" class="dropbtn">Veda Data</button>
+                <div class="dropdown-content">
+                    <select id="layers1" multiple></select>
+                    <input type="date" id="datePicker1">
+                    <button class="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div id="legend1" class="legend"></div>
+    </div>
+    <div class="map-container">
+        <div id="map2" class="map"></div>
+        <div class="button-container right">
+            <div class="dropdown">
+                <button id="dropdown2" class="dropbtn">Veda Data</button>
+                <div class="dropdown-content">
+                    <select id="layers2" multiple></select>
+                    <input type="date" id="datePicker2">
+                    <button class="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div id="legend2" class="legend"></div>
+    </div>
+    <div class="map-container">
+        <div id="map3" class="map"></div>
+        <div class="button-container left">
+            <div class="dropdown">
+                <button id="dropdown3" class="dropbtn">Veda Data</button>
+                <div class="dropdown-content">
+                    <select id="layers3" multiple></select>
+                    <input type="date" id="datePicker3">
+                    <button class="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div id="legend3" class="legend"></div>
+    </div>
+    <div class="map-container">
+        <div id="map4" class="map"></div>
+        <div class="button-container right">
+            <div class="dropdown">
+                <button id="dropdown4" class="dropbtn">Veda Data</button>
+                <div class="dropdown-content">
+                    <select id="layers4" multiple></select>
+                    <input type="date" id="datePicker4">
+                    <button class="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div id="legend4" class="legend"></div>
+    </div>
+</div>
+
+
+<script>
+     mapboxgl.accessToken = 'pk.eyJ1IjoiYmluaXRhZ3lhd2FsaSIsImEiOiJjbGluNW5qM3IwOGt5M2hvMXJ6NW9vZno5In0.cQNTdD6Rzt7-zq1GHMe-3w';
+
+        const INITIAL_CENTER_ZOOM_STYLE = [
+            { center: [-96.805066, 37.934385], zoom: 4.5, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"},
+            { center: [-96.805066, 37.934385], zoom: 4.5, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"},
+            { center: [-96.805066, 37.934385], zoom: 4.5, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"},
+            { center: [-96.805066, 37.934385], zoom: 4.5, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"}
+        ];
+
+        const maps = [
+            new mapboxgl.Map({
+                container: 'map1',
+                style: INITIAL_CENTER_ZOOM_STYLE[0].style,
+                zoom: INITIAL_CENTER_ZOOM_STYLE[0].zoom,
+                minZoom: 3.5,
+                center: INITIAL_CENTER_ZOOM_STYLE[0].center,
+                attributionControl: false
+            }),
+            new mapboxgl.Map({
+                container: 'map2',
+                style: INITIAL_CENTER_ZOOM_STYLE[1].style,
+                zoom: INITIAL_CENTER_ZOOM_STYLE[1].zoom,
+                minZoom: 3.5,
+                center: INITIAL_CENTER_ZOOM_STYLE[1].center,
+                attributionControl: false
+            }),
+            new mapboxgl.Map({
+                container: 'map3',
+                style: INITIAL_CENTER_ZOOM_STYLE[2].style,
+                zoom: INITIAL_CENTER_ZOOM_STYLE[2].zoom,
+                minZoom: 3.5,
+                center: INITIAL_CENTER_ZOOM_STYLE[2].center,
+                attributionControl: false
+            }),
+            new mapboxgl.Map({
+                container: 'map4',
+                style: INITIAL_CENTER_ZOOM_STYLE[3].style,
+                zoom: INITIAL_CENTER_ZOOM_STYLE[3].zoom,
+                minZoom: 3.5,
+                center: INITIAL_CENTER_ZOOM_STYLE[3].center,
+                // attributionControl: false
+            }),
+        ];
+
+
+    </script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
+    <script src="main-script.js"></script>
+</body>
+</html>

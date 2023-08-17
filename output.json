@@ -1,0 +1,798 @@
+{
+  "barc-thomasfire": {
+    "colormap": "rdylgn_r",
+    "rescale": [
+      1,
+      4
+    ],
+    "nodata": "nan",
+    "type": "categorical",
+    "stops": [
+      {
+        "color": "#94c772",
+        "label": "Unburned"
+      },
+      {
+        "color": "#faf88e",
+        "label": "Low"
+      },
+      {
+        "color": "#ea915e",
+        "label": "Moderate"
+      },
+      {
+        "color": "#971d2b",
+        "label": "High"
+      }
+    ]
+  },
+  "eis_fire_perimeter": {
+    "colormap": null,
+    "rescale": null,
+    "nodata": null,
+    "type": null,
+    "stops": null
+  },
+  "houston-ndvi": {
+    "colormap": "ylgn",
+    "rescale": [
+      -2000,
+      8500
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#ffffe5",
+      "#e5f5ac",
+      "#a2d88a",
+      "#4cb063",
+      "#15793e",
+      "#004529"
+    ]
+  },
+  "conus-reach": {
+    "colormap": "gnbu_r",
+    "rescale": [
+      1,
+      1
+    ],
+    "nodata": 65535,
+    "type": null,
+    "stops": null
+  },
+  "social-vulnerability-index-socioeconomic": {
+    "colormap": "greens",
+    "rescale": [
+      0,
+      1
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#f7fcf5",
+      "#d3eecd",
+      "#98d594",
+      "#4bb062",
+      "#157f3b",
+      "#00441b"
+    ]
+  },
+  "ecco-surface-height-change": {
+    "colormap": "rdbu",
+    "rescale": [
+      -0.313,
+      0.313
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#EF8A62",
+      "#F7F7F7",
+      "#67A9CF"
+    ]
+  },
+  "mtbs-burn-severity": {
+    "colormap": "rdylgn_r",
+    "rescale": [
+      1,
+      4
+    ],
+    "nodata": null,
+    "type": "categorical",
+    "stops": [
+      {
+        "color": "#94c772",
+        "label": "Unburned"
+      },
+      {
+        "color": "#faf88e",
+        "label": "Low"
+      },
+      {
+        "color": "#ea915e",
+        "label": "Moderate"
+      },
+      {
+        "color": "#971d2b",
+        "label": "High"
+      }
+    ]
+  },
+  "EPA-annual-emissions_4B_Manure_Management": {
+    "colormap": "rainbow",
+    "rescale": [
+      0,
+      46428019752
+    ],
+    "nodata": 0,
+    "type": "gradient",
+    "stops": [
+      "#60007d",
+      "#30137d",
+      "#1960ae",
+      "#7ac300",
+      "#f2ce00",
+      "#ef6a01",
+      "#cc0019"
+    ]
+  },
+  "IS2SITMOGR4-cog": {
+    "colormap": "plasma",
+    "rescale": [
+      0,
+      16
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#0d0887",
+      "#7e03a8",
+      "#cc4778",
+      "#f89540",
+      "#f89540"
+    ]
+  },
+  "lis-etsuppression": {
+    "colormap": "rdylbu",
+    "rescale": [
+      -0.6,
+      0.6
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#a50026",
+      "#f46d43",
+      "#fee090",
+      "#e0f3f8",
+      "#74add1",
+      "#313695"
+    ]
+  },
+  "disalexi-etsuppression": {
+    "colormap": "rdylbu",
+    "rescale": [
+      -1.0,
+      1.0
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#a50026",
+      "#f46d43",
+      "#fee090",
+      "#e0f3f8",
+      "#74add1",
+      "#313695"
+    ]
+  },
+  "CMIP245-winter-median-pr": {
+    "colormap": "rdbu",
+    "rescale": [
+      -60,
+      60
+    ],
+    "nodata": "nan",
+    "type": "gradient",
+    "stops": [
+      "#CA171C",
+      "#DE6158",
+      "#F2B089",
+      "#F5D5C3",
+      "#F8F8F8",
+      "#CDE2EF",
+      "#A0CBE4",
+      "#5EA4D1",
+      "#207BBD"
+    ]
+  },
+  "lis-global-da-evap": {
+    "colormap": "viridis",
+    "rescale": [
+      0,
+      0.0001
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#440154",
+      "#3b528b",
+      "#21918c",
+      "#5ec962",
+      "#fde725"
+    ]
+  },
+  "hls-l30-002-ej-reprocessed": {
+    "colormap": null,
+    "rescale": null,
+    "nodata": null,
+    "type": null,
+    "stops": null
+  },
+  "social-vulnerability-index-housing": {
+    "colormap": "blues",
+    "rescale": [
+      0,
+      1
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#f7fbff",
+      "#d0e1f2",
+      "#94c4df",
+      "#4a98c9",
+      "#1764ab",
+      "#08306b"
+    ]
+  },
+  "nightlights-hd-1band": {
+    "colormap": "inferno",
+    "rescale": [
+      0,
+      255
+    ],
+    "nodata": null,
+    "type": null,
+    "stops": null
+  },
+  "snow-projections-median-245": {
+    "colormap": "blues",
+    "rescale": [
+      0,
+      1000
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#F7FBFF",
+      "#D0E1F2",
+      "#94C4DF",
+      "#4A98C9",
+      "#2164AB",
+      "#0E316B"
+    ]
+  },
+  "OMSO2PCA-COG": {
+    "colormap": "rdylbu_r",
+    "rescale": [
+      0,
+      1
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#313695",
+      "#74add1",
+      "#e0f3f8",
+      "#fee090",
+      "#f46d43",
+      "#a50026"
+    ]
+  },
+  "geoglam": {
+    "colormap": null,
+    "rescale": null,
+    "nodata": null,
+    "type": "categorical",
+    "stops": [
+      {
+        "color": "#3A8DC6",
+        "label": "Exceptional"
+      },
+      {
+        "color": "#62D246",
+        "label": "Favourable"
+      },
+      {
+        "color": "#FFFF00",
+        "label": "Watch"
+      },
+      {
+        "color": "#EC5830",
+        "label": "Poor"
+      },
+      {
+        "color": "#891911",
+        "label": "Failure"
+      },
+      {
+        "color": "#787878",
+        "label": "Out of season"
+      },
+      {
+        "color": "#804115",
+        "label": "No data"
+      }
+    ]
+  },
+  "frp-max-thomasfire": {
+    "colormap": "inferno_r",
+    "rescale": [
+      1.0,
+      1080
+    ],
+    "nodata": "nan",
+    "type": "gradient",
+    "stops": [
+      "#FBB41A",
+      "#BB3754",
+      "#781D6D",
+      "#34095F"
+    ]
+  },
+  "social-vulnerability-index-household": {
+    "colormap": "oranges",
+    "rescale": [
+      0,
+      1
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#fff5eb",
+      "#fdd9b4",
+      "#fda762",
+      "#f3701b",
+      "#c54102",
+      "#7f2704"
+    ]
+  },
+  "EPA-annual-emissions_2B5_Petrochemical_Production": {
+    "colormap": "rainbow",
+    "rescale": [
+      0,
+      3715968204
+    ],
+    "nodata": 0,
+    "type": "gradient",
+    "stops": [
+      "#60007d",
+      "#30137d",
+      "#1960ae",
+      "#7ac300",
+      "#f2ce00",
+      "#ef6a01",
+      "#cc0019"
+    ]
+  },
+  "EPA-annual-emissions_1B1a_Coal_Mining_Underground": {
+    "colormap": "rainbow",
+    "rescale": [
+      0,
+      2022634652958
+    ],
+    "nodata": 0,
+    "type": "gradient",
+    "stops": [
+      "#60007d",
+      "#30137d",
+      "#1960ae",
+      "#7ac300",
+      "#f2ce00",
+      "#ef6a01",
+      "#cc0019"
+    ]
+  },
+  "social-vulnerability-index-minority": {
+    "colormap": "purples",
+    "rescale": [
+      0,
+      1
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#fcfbfd",
+      "#e2e2ef",
+      "#b6b6d8",
+      "#8683bd",
+      "#61409b",
+      "#3f007d"
+    ]
+  },
+  "no2-monthly": {
+    "colormap": "rdbu_r",
+    "rescale": [
+      0,
+      "1.5e16"
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#3A88BD",
+      "#C9E0ED",
+      "#E4EEF3",
+      "#FDDCC9",
+      "#DD7059"
+    ]
+  },
+  "EPA-annual-emissions_1B2a_Petroleum": {
+    "colormap": "rainbow",
+    "rescale": [
+      0,
+      282207914557
+    ],
+    "nodata": 0,
+    "type": "gradient",
+    "stops": [
+      "#60007d",
+      "#30137d",
+      "#1960ae",
+      "#7ac300",
+      "#f2ce00",
+      "#ef6a01",
+      "#cc0019"
+    ]
+  },
+  "blue-tarp-detection": {
+    "colormap": "reds",
+    "rescale": [
+      0,
+      400
+    ],
+    "nodata": null,
+    "type": null,
+    "stops": null
+  },
+  "MO_NPP_npp_vgpm": {
+    "colormap": "jet",
+    "rescale": [
+      0,
+      1500
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#000083",
+      "#003caa",
+      "#05ffff",
+      "#ffff00",
+      "#fa0000",
+      "#800000"
+    ]
+  },
+  "co2-mean": {
+    "colormap": "rdylbu_r",
+    "rescale": [
+      0.000408,
+      0.000419
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#4575b4",
+      "#91bfdb",
+      "#e0f3f8",
+      "#ffffbf",
+      "#fee090",
+      "#fc8d59",
+      "#d73027"
+    ]
+  },
+  "grdi-cdr-raster": {
+    "colormap": "viridis",
+    "rescale": [
+      0,
+      100
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#440154",
+      "#3b528b",
+      "#21918c",
+      "#5ec962",
+      "#fde725"
+    ]
+  },
+  "CMIP245-winter-median-ta": {
+    "colormap": "rdbu_r",
+    "rescale": [
+      -5.5,
+      5.5
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#207BBD",
+      "#5EA4D1",
+      "#A0CBE4",
+      "#CDE2EF",
+      "#F8F8F8",
+      "#F5D5C3",
+      "#F2B089",
+      "#DE6158",
+      "#CA171C"
+    ]
+  },
+  "facebook_population_density": {
+    "colormap": "ylorrd",
+    "rescale": [
+      0,
+      69
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#ffffcc",
+      "#fee187",
+      "#feab49",
+      "#fc5b2e",
+      "#d41020",
+      "#800026"
+    ]
+  },
+  "sport-lis-vsm0_100cm-percentile": {
+    "colormap": "rdylbu",
+    "rescale": [
+      0,
+      100
+    ],
+    "nodata": 9999.0,
+    "type": "gradient",
+    "stops": [
+      "#a50026",
+      "#f46d43",
+      "#fee090",
+      "#e0f3f8",
+      "#74add1",
+      "#313695"
+    ]
+  },
+  "lis-tvegsuppression": {
+    "colormap": "rdylbu",
+    "rescale": [
+      -0.6,
+      0.6
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#a50026",
+      "#f46d43",
+      "#fee090",
+      "#e0f3f8",
+      "#74add1",
+      "#313695"
+    ]
+  },
+  "caldor-fire-behavior": {
+    "colormap": "inferno_r",
+    "rescale": [
+      0,
+      93
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#FBB41A",
+      "#BB3754",
+      "#781D6D",
+      "#34095F"
+    ]
+  },
+  "EPA-annual-emissions_1B2b_Natural_Gas_Processing": {
+    "colormap": "rainbow",
+    "rescale": [
+      0,
+      963867416985
+    ],
+    "nodata": 0,
+    "type": "gradient",
+    "stops": [
+      "#60007d",
+      "#30137d",
+      "#1960ae",
+      "#7ac300",
+      "#f2ce00",
+      "#ef6a01",
+      "#cc0019"
+    ]
+  },
+  "lis-tws-anomaly": {
+    "colormap": "rdylbu",
+    "rescale": [
+      -200,
+      200
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#a50026",
+      "#f46d43",
+      "#fee090",
+      "#e0f3f8",
+      "#74add1",
+      "#313695"
+    ]
+  },
+  "snow-projections-diff-245": {
+    "colormap": "rdbu",
+    "rescale": [
+      -100,
+      100
+    ],
+    "nodata": "nan",
+    "type": "gradient",
+    "stops": [
+      "#670220",
+      "#D65F4D",
+      "#FCDBC7",
+      "#D1E5F0",
+      "#4393C3",
+      "#0D2F60"
+    ]
+  },
+  "lis-global-da-tws-trend": {
+    "colormap": "rdbu",
+    "rescale": [
+      -20,
+      20
+    ],
+    "nodata": -9999.0,
+    "type": "gradient",
+    "stops": [
+      "#a50026",
+      "#f46d43",
+      "#fee090",
+      "#e0f3f8",
+      "#74add1",
+      "#313695"
+    ]
+  },
+  "nceo_africa_2017": {
+    "colormap": "gist_earth_r",
+    "rescale": [
+      0,
+      400
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#ffffff",
+      "#e5c7bb",
+      "#ceab84",
+      "#b5b65d",
+      "#86a954",
+      "#43974c",
+      "#30817d",
+      "#1f567b",
+      "#080e74",
+      "#000000"
+    ]
+  },
+  "bangladesh-landcover-2001-2020": {
+    "colormap": null,
+    "rescale": null,
+    "nodata": null,
+    "type": "categorical",
+    "stops": [
+      {
+        "color": "#000000",
+        "label": "No Data"
+      },
+      {
+        "color": "#008200",
+        "label": "Native Vegetation"
+      },
+      {
+        "color": "#1183e2",
+        "label": "Open water"
+      },
+      {
+        "color": "#c72b20",
+        "label": "Urban areas"
+      },
+      {
+        "color": "#62ea25",
+        "label": "Cropland"
+      }
+    ]
+  },
+  "social-vulnerability-index-overall": {
+    "colormap": "ylgnbu",
+    "rescale": [
+      0,
+      1
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#ffffd9",
+      "#d6efb3",
+      "#73c8bd",
+      "#2498c1",
+      "#234da0",
+      "#081d58"
+    ]
+  },
+  "nightlights-hd-monthly": {
+    "colormap": "inferno",
+    "rescale": [
+      0,
+      255
+    ],
+    "nodata": null,
+    "type": "gradient",
+    "stops": [
+      "#08041d",
+      "#1f0a46",
+      "#52076c",
+      "#f57c16",
+      "#f7cf39"
+    ]
+  },
+  "lis-tws-trend": {
+    "colormap": "rdylbu",
+    "rescale": [
+      -1,
+      1
+    ],
+    "nodata": -9999,
+    "type": "gradient",
+    "stops": [
+      "#a50026",
+      "#f46d43",
+      "#fee090",
+      "#e0f3f8",
+      "#74add1",
+      "#313695"
+    ]
+  },
+  "EPA-annual-emissions_6B_Wastewater_Treatment_Domestic": {
+    "colormap": "rainbow",
+    "rescale": [
+      0,
+      91901814374
+    ],
+    "nodata": 0,
+    "type": "gradient",
+    "stops": [
+      "#60007d",
+      "#30137d",
+      "#1960ae",
+      "#7ac300",
+      "#f2ce00",
+      "#ef6a01",
+      "#cc0019"
+    ]
+  },
+  "lis-tws-nonstationarity-index": {
+    "colormap": "rdylbu",
+    "rescale": [
+      -1,
+      1
+    ],
+    "nodata": -9999,
+    "type": "gradient",
+    "stops": [
+      "#a50026",
+      "#f46d43",
+      "#fee090",
+      "#e0f3f8",
+      "#74add1",
+      "#313695"
+    ]
+  }
+}
