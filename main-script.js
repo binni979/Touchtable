@@ -10,7 +10,7 @@ function createDropdownOptions(mapIndex) {
     // Fetch layers and populate dropdown options
     // https://dev-stac.delta-backend.com/collections
     // https://staging-stac.delta-backend.com/collections
-    fetch("https://staging-stac.delta-backend.com/collections")
+    fetch(" https://staging-stac.delta-backend.com/collections")
             .then(response => response.json())
             .then(response => {
                 // const availableDates = [];
