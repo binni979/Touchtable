@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display a Veda data on a webpage</title>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
@@ -10,19 +8,14 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Include jQuery UI -->
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   </head>
   <body>
   <div id = "menu">
-<!--      <span id="reset" class="reset-btn"><i class="fas fa-undo"></i></span>-->
-        <a href="index.html">Full map</a>
+        <a href="main.html">Full map</a>
          <span id="reset" class="reset-btn"><i class="fas fa-undo"></i></span>
         <a href="four-maps.html">Four maps</a>
   </div>
@@ -88,56 +81,58 @@
     </div>
 </div>
   <script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiYmluaXRhZ3lhd2FsaSIsImEiOiJjbGluNW5qM3IwOGt5M2hvMXJ6NW9vZno5In0.cQNTdD6Rzt7-zq1GHMe-3w';
-        const INITIAL_CENTER_ZOOM_STYLE = [
-            { center: [-112.06,46.40], zoom: 5.5, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"},
-            { center: [-82.06,46.40], zoom: 5.5, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"},
-            { center: [-112.06,32], zoom: 5.5, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"},
-            { center: [-82.06, 32], zoom: 5.5, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"}
-        ];
-        // const INITIAL_CENTER_ZOOM_STYLE = [
-        //     { center: [-115.06,46.40], zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"},
-        //     { center: [-82.06,46.40], zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"},
-        //     { center: [-115.06,29], zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"},
-        //     { center: [-82.06, 29], zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m"}
-        // ];
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmluaXRhZ3lhd2FsaSIsImEiOiJjbGluNW5qM3IwOGt5M2hvMXJ6NW9vZno5In0.cQNTdD6Rzt7-zq1GHMe-3w';
 
-        const maps = [
-            new mapboxgl.Map({
-                container: 'map1',
-                style:INITIAL_CENTER_ZOOM_STYLE[0].style ,
-                zoom: INITIAL_CENTER_ZOOM_STYLE[0].zoom,
-                minZoom: 3.5,
-                center: INITIAL_CENTER_ZOOM_STYLE[0].center,
-                attributionControl: false
-            }),
-            new mapboxgl.Map({
-                container: 'map2',
-                style: INITIAL_CENTER_ZOOM_STYLE[1].style ,
-                zoom: INITIAL_CENTER_ZOOM_STYLE[1].zoom,
-                minZoom: 3.5,
-                center: INITIAL_CENTER_ZOOM_STYLE[1].center,
-                attributionControl: false
-            }),
-            new mapboxgl.Map({
-                container: 'map3',
-                style: INITIAL_CENTER_ZOOM_STYLE[2].style ,
-                zoom: INITIAL_CENTER_ZOOM_STYLE[2].zoom,
-                minZoom: 3.5,
-                center: INITIAL_CENTER_ZOOM_STYLE[2].center,
-                attributionControl: false
-            }),
-            new mapboxgl.Map({
-                container: 'map4',
-                style: INITIAL_CENTER_ZOOM_STYLE[3].style ,
-                zoom: INITIAL_CENTER_ZOOM_STYLE[3].zoom,
-                minZoom: 3.5,
-                center: INITIAL_CENTER_ZOOM_STYLE[3].center,
-                // attributionControl: false
-            }),
+const INITIAL_CENTER_ZOOM_STYLE = [
+    { latitude: 46.40, longitude: -115.06, zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m" },
+    { latitude: 46.40, longitude: -82.06, zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m" },
+    { latitude: 29, longitude: -115.06, zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m" },
+    { latitude: 29, longitude: -82.06, zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m" }
+];
+
+const maps = [];
+
+const adjustCenter = () => {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    let minLatitude = Infinity;
+    let maxLatitude = -Infinity;
+    let minLongitude = Infinity;
+    let maxLongitude = -Infinity;
+
+    INITIAL_CENTER_ZOOM_STYLE.forEach((data) => {
+        if (data.latitude < minLatitude) minLatitude = data.latitude;
+        if (data.latitude > maxLatitude) maxLatitude = data.latitude;
+        if (data.longitude < minLongitude) minLongitude = data.longitude;
+        if (data.longitude > maxLongitude) maxLongitude = data.longitude;
+    });
+
+    const mapContainer = document.getElementById('container');
+    mapContainer.style.width = `${screenWidth}px`; // Adjusted width
+    mapContainer.style.height = `${screenHeight}px`; // Adjusted height
+
+    const map = new mapboxgl.Map({
+        container: 'container',
+        style: 'mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m',
+        minZoom: 3.5,
+        attributionControl: false
+    });
+
+    map.on('load', () => {
+        const bounds = [
+            [minLongitude - 20, minLatitude - 10],
+            [maxLongitude + 20, maxLatitude + 10]
         ];
+
+        map.fitBounds(bounds, { padding: 0 });
+    });
+};
+
+adjustCenter();
 
 </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
   <script src="main-script.js"></script>
 <!--  <script src="main.js"></script>-->
   <script>
