@@ -85,14 +85,23 @@
 </div>
   <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiYmluaXRhZ3lhd2FsaSIsImEiOiJjbGluNW5qM3IwOGt5M2hvMXJ6NW9vZno5In0.cQNTdD6Rzt7-zq1GHMe-3w';
-        const adjustCenter = () => {
+
+const INITIAL_CENTER_ZOOM_STYLE = [
+    { latitude: 46.40, longitude: -115.06, zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m" },
+    { latitude: 46.40, longitude: -82.06, zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m" },
+    { latitude: 29, longitude: -115.06, zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m" },
+    { latitude: 29, longitude: -82.06, zoom: 4.2, style: "mapbox://styles/binitagyawali/clivtsgt400nv01qif6ja7r0m" }
+];
+
+const maps = [];
+const adjustCenter = () => {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
 
     INITIAL_CENTER_ZOOM_STYLE.forEach((data, index) => {
         const mapContainer = document.getElementById(`map${index + 1}`);
-        mapContainer.style.width = `${screenWidth / 2}px`;
-        mapContainer.style.height = `${screenHeight / 2}px`;
+        mapContainer.style.width = `${screenWidth / 2}px`; // Adjusted width
+        mapContainer.style.height = `${screenHeight / 2}px`; // Adjusted height
 
         const map = new mapboxgl.Map({
             container: `map${index + 1}`,
@@ -106,8 +115,8 @@
 
             if (index < 2) {
                 bounds = [
-                    [data.longitude - 15.2, data.latitude - 1],
-                    [data.longitude + 18, data.latitude + 7]
+                    [data.longitude - 15.2, data.latitude - 1], // Adjusted lower bound latitude
+                    [data.longitude + 18, data.latitude + 7]  // Adjusted upper bound latitude
                 ];
             } else {
                 bounds = [
@@ -115,11 +124,14 @@
                     [data.longitude + 18, data.latitude + 5]
                 ];
             }
+
             map.fitBounds(bounds, { padding: 0 });
+
             maps.push(map);
         });
     });
 };
+
 adjustCenter();
 
 </script>
