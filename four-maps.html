@@ -89,9 +89,8 @@
 </div>
   <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiYmluaXRhZ3lhd2FsaSIsImEiOiJjbGluNW5qM3IwOGt5M2hvMXJ6NW9vZno5In0.cQNTdD6Rzt7-zq1GHMe-3w';
-        const usBounds = [[-125.0, 24.0], [-66.0, 49.0]];
+        const INITIAL_CENTER_ZOOM_STYLE = [[-125.0, 24.0], [-66.0, 49.0]];
 
-        // Initialize maps
         const maps = [];
 
         for (let i = 0; i < 4; i++) {
@@ -101,7 +100,7 @@
                 minZoom: 3.3,
                 attributionControl: i === 3
             });
-            map.fitBounds(usBounds, {padding: 20});
+            map.fitBounds(INITIAL_CENTER_ZOOM_STYLE, {padding: 20});
             maps.push(map);
         }
 
