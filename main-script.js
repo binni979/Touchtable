@@ -8,8 +8,6 @@ function createDropdownOptions(mapIndex) {
     var selectTimeFrame, rangeDateandTime, available_dates, isPeriodic, timeDensity,description;
 
     // Fetch layers and populate dropdown options
-    // https://dev-stac.delta-backend.com/collections
-    // https://staging-stac.delta-backend.com/collections
     fetch(" https://staging-stac.delta-backend.com/collections")
             .then(response => response.json())
             .then(response => {
@@ -47,38 +45,13 @@ function createDropdownOptions(mapIndex) {
             available_dates = selectedOption.getAttribute('data-select-timeframe');
             datePicker.setAttribute("min", minDate);
             datePicker.setAttribute("max", maxDate);
-            available_dates = formatDateToYYYYMMDD(available_dates)
-
-        });
-
+            available_dates = formatDateToYYYYMMDD(available_dates);
+        }
+    );
+        //
         datePicker.addEventListener('change', () => {
             selected_date = datePicker.value;
         });
-
-    // layerSelect.addEventListener("change", () => {
-    //     const selectedOption = layerSelect.options[layerSelect.selectedIndex];
-    //     const minDate = selectedOption.getAttribute('data-min-date');
-    //     const maxDate = selectedOption.getAttribute('data-max-date');
-    //     available_dates = selectedOption.getAttribute('data-select-timeframe');
-    //     available_dates = formatDateToYYYYMMDD(available_dates);
-    //
-    //     datePicker.innerHTML = '';
-    //     datePicker.setAttribute("min", minDate);
-    //     datePicker.setAttribute("max", maxDate);
-    //
-    //     // const dateOptions = datePicker.querySelectorAll('option');
-    //     // dateOptions.forEach(option => {
-    //     //     option.disabled = !available_dates.includes(option.value);
-    //     // });
-    //     // if (!available_dates.includes(datePicker.value)) {
-    //     //         datePicker.value = '';
-    //     //         selected_date = '';
-    //     //     }
-    // });
-    //
-    // datePicker.addEventListener('change', () => {
-    //     selected_date = datePicker.value;
-    // });
 
     submitButton.addEventListener('click', async () => {
             console.log(available_dates, selected_date, description, "MMMMM");
@@ -288,11 +261,17 @@ function getAvailableDatesFromDashboard(collection) {
         });
 
         // Create dropdown options for each map
+        // createDropdownOptions(mapIndex);
+        // const map = maps[index];
+        // map.on('click', () => {
+        //     dropdownContent.style.display = 'none';
+        // });
         createDropdownOptions(mapIndex);
-        const map = maps[index];
-        map.on('click', () => {
-            dropdownContent.style.display = 'none';
-        });
+        maps.forEach(map => {
+            map.on('click', ()=>{
+                dropdownContent.style.display = 'none';
+            })
+        })
     });
 
     function hideDropdownContent(mapIndex) {
